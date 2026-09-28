@@ -13,10 +13,14 @@ PS1='[\u@\h \W]\$ '
 # ------------------------------ zen
 
 # aliases
-# alias cx='codex --yolo'
+alias cx='codex --yolo'
 
 # inits
 eval "$(starship init bash)"
 
 # must be last
 eval "$(zoxide init bash --cmd cd)"
+
+# >>> Codex installer >>>
+export PATH="/home/p4rim/.local/bin:$PATH"
+# <<< Codex installer <<<
