@@ -8,7 +8,9 @@
 # alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
-. "$HOME/.cargo/env"
+if [[ -r "$HOME/.cargo/env" ]]; then
+    . "$HOME/.cargo/env"
+fi
 
 # ------------------------------ zen
 
