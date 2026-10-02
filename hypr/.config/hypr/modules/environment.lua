@@ -1,4 +1,7 @@
-hl.env("XCURSOR_SIZE", "24")
-hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("XCURSOR_THEME", "Adwaita")
-hl.env("XCURSOR_PATH", os.getenv("HOME") .. "/.local/share/icons:" .. os.getenv("HOME") .. "/.icons:/run/current-system/sw/share/icons")
+-- hl.env("XCURSOR_SIZE", "24")
+-- hl.env("HYPRCURSOR_SIZE", "24")
+-- hl.env("XCURSOR_THEME", "Adwaita")
+-- hl.env(
+-- 	"XCURSOR_PATH",
+-- 	os.getenv("HOME") .. "/.local/share/icons:" .. os.getenv("HOME") .. "/.icons:/run/current-system/sw/share/icons"
+-- )

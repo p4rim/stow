@@ -105,5 +105,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cx='codex --yolo'
+alias hypr='start-hyprland'
 
 eval "$(zoxide init zsh --cmd cd)"
+
+# >>> Codex installer >>>
+export PATH="/home/zen/.local/bin:$PATH"
+# <<< Codex installer <<<
