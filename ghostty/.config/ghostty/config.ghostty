@@ -1,11 +1,11 @@
 # background
-background = 000000
+background = 101010
 foreground = ffffff
 
 # Font
 font-family = "JetBrainsMono Nerd Font"
 font-style = Regular
-font-size = 20 
+font-size = 26
 
 # Window
 window-theme = ghostty
