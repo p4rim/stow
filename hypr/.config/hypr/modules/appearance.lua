@@ -1,7 +1,7 @@
 hl.config({
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 5,
+		gaps_out = 10,
 		border_size = 1,
 		col = {
 			active_border = { colors = { "rgba(cccccccc)" } },
@@ -29,10 +29,6 @@ hl.config({
 			passes = 1,
 			vibrancy = 0.1696,
 		},
-	},
-
-	animations = {
-		enabled = true,
 	},
 
 	dwindle = {

@@ -1,5 +1,5 @@
 local mainMod = "SUPER"
-local terminal = "foot"
+local terminal = "ghostty"
 local fileManager = "thunar"
 local browser = "chromium"
 local appLauncher = "rofi -show drun"
