@@ -2,7 +2,7 @@
 -- Source: https://raw.githubusercontent.com/hyprwm/Hyprland/v0.56.2/example/hyprland.lua
 -- Edit this file to experiment with curves, durations, and styles.
 
-hl.config({ animations = { enabled = false } })
+hl.config({ animations = { enabled = true } })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })

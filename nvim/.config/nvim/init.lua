@@ -1,5 +1,12 @@
 vim.opt.termguicolors = true
-vim.cmd.colorscheme("habamax")
+
+-- +---+---+ +---+---+ +---+---+
+-- + core/ui.lua
+-- +---+---+ +---+---+ +---+---+
+
+-- vim.cmd.colorscheme("habamax")
+vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
+vim.cmd.colorscheme("ring0dark")
 
 -- +---+---+ +---+---+ +---+---+
 -- + core/options.lua

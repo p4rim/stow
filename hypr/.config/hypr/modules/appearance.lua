@@ -1,7 +1,7 @@
 hl.config({
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 5,
+		gaps_out = 10,
 		border_size = 1,
 		col = {
 			active_border = { colors = { "rgba(cccccccc)" } },
@@ -17,12 +17,14 @@ hl.config({
 		rounding_power = 0,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
+
 		shadow = {
 			enabled = true,
 			range = 4,
 			render_power = 3,
 			color = 0xee1a1a1a,
 		},
+
 		blur = {
 			enabled = true,
 			size = 3,
@@ -46,6 +48,8 @@ hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = true,
+		disable_splash_rendering = true,
 		on_focus_under_fullscreen = 1,
+		background_color = "rgb(000000)",
 	},
 })
