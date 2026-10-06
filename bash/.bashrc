@@ -14,19 +14,8 @@ fi
 
 # ------------------------------ zen
 
-# aliases
-alias cx='codex --yolo'
-
-# inits
-# eval "$(starship init bash)"
-
 # enable vi mode 
 # set -o vi
 
 # must be last
 eval "$(zoxide init bash --cmd cd)"
-
-
-# >>> Codex installer >>>
-export PATH="/home/p4rim/.local/bin:$PATH"
-# <<< Codex installer <<<
