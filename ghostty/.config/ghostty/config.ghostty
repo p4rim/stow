@@ -15,6 +15,7 @@ window-theme = ghostty
 confirm-close-surface=false
 resize-overlay = never
 gtk-toolbar-style = flat
+adjust-cell-height = -10%
 
 # Cursor styling
 cursor-style = "block"

@@ -4,9 +4,21 @@ vim.opt.termguicolors = true
 -- + core/ui.lua
 -- +---+---+ +---+---+ +---+---+
 
--- vim.cmd.colorscheme("habamax")
+-- vim.pack.add({
+-- 	{ src = "https://github.com/WTFox/luna.nvim" },
+-- })
+-- vim.cmd.colorscheme("luna")
+
+-- Nice ones to switch around between
 vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
 vim.cmd.colorscheme("ring0dark")
+-- vim.cmd.colorscheme("lunaperche")
+-- vim.cmd.colorscheme("habamax")
+-- vim.cmd.colorscheme("koehler")
+-- vim.cmd.colorscheme("industry")
+-- vim.cmd.colorscheme("pablo")
+-- vim.cmd.colorscheme("murphy")
+-- vim.cmd.colorscheme("zaibatsu")
 
 -- +---+---+ +---+---+ +---+---+
 -- + core/options.lua
@@ -14,10 +26,10 @@ vim.cmd.colorscheme("ring0dark")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.opt.wrap = false
-vim.opt.scrolloff = 10
-vim.opt.sidescrolloff = 10
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
