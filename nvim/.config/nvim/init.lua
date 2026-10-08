@@ -4,14 +4,24 @@ vim.opt.termguicolors = true
 -- + core/ui.lua
 -- +---+---+ +---+---+ +---+---+
 
+vim.pack.add({
+	"https://github.com/rebelot/kanagawa.nvim",
+})
+vim.cmd.colorscheme("kanagawa-dragon")
+
+vim.api.nvim_set_hl(0, "Cursor", {
+	bg = "#C4B28A",
+	fg = "#181616",
+})
+
 -- vim.pack.add({
 -- 	{ src = "https://github.com/WTFox/luna.nvim" },
 -- })
 -- vim.cmd.colorscheme("luna")
 
 -- Nice ones to switch around between
-vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
-vim.cmd.colorscheme("ring0dark")
+-- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
+-- vim.cmd.colorscheme("ring0dark")
 -- vim.cmd.colorscheme("lunaperche")
 -- vim.cmd.colorscheme("habamax")
 -- vim.cmd.colorscheme("koehler")
@@ -80,8 +90,10 @@ vim.opt.mouse = "a"
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.modifiable = true
 
-vim.opt.guicursor =
-	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+-- vim.opt.guicursor =
+-- 	"n-v-c:block,i-ci-ve:block,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
+vim.opt.guicursor = "a:block-blinkon0"
 
 vim.opt.splitbelow = true
 vim.opt.splitright = true
