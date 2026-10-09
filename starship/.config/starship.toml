@@ -6,7 +6,7 @@ format = '$directory$git_branch$cmd_duration$status $character'
 [directory]
 style = 'white'
 format = '[$path]($style)'
-truncation_length = 2
+truncation_length = 1
 
 [git_branch]
 format = ' [git:$branch](dimmed white)'

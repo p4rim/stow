@@ -1,4 +1,7 @@
-background = 181616
+# background = 181616
+# foreground = ffffff
+
+background = 000000
 foreground = ffffff
 
 font-family = "JetBrainsMono Nerd Font"
