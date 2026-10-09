@@ -17,5 +17,9 @@ fi
 # enable vi mode 
 # set -o vi
 
+# starship
+
+eval "$(starship init bash)"
+
 # must be last
 eval "$(zoxide init bash --cmd cd)"
