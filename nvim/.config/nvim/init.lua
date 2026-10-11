@@ -4,15 +4,15 @@ vim.opt.termguicolors = true
 -- + core/ui.lua
 -- +---+---+ +---+---+ +---+---+
 
-vim.pack.add({
-	"https://github.com/rebelot/kanagawa.nvim",
-})
-vim.cmd.colorscheme("kanagawa-dragon")
-
-vim.api.nvim_set_hl(0, "Cursor", {
-	bg = "#C4B28A",
-	fg = "#181616",
-})
+-- vim.pack.add({
+-- 	"https://github.com/rebelot/kanagawa.nvim",
+-- })
+-- vim.cmd.colorscheme("kanagawa-dragon")
+--
+-- vim.api.nvim_set_hl(0, "Cursor", {
+-- 	bg = "#C4B28A",
+-- 	fg = "#181616",
+-- })
 
 -- vim.pack.add({
 -- 	{ src = "https://github.com/WTFox/luna.nvim" },
@@ -20,8 +20,8 @@ vim.api.nvim_set_hl(0, "Cursor", {
 -- vim.cmd.colorscheme("luna")
 
 -- Nice ones to switch around between
--- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
--- vim.cmd.colorscheme("ring0dark")
+vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
+vim.cmd.colorscheme("ring0dark")
 -- vim.cmd.colorscheme("lunaperche")
 -- vim.cmd.colorscheme("habamax")
 -- vim.cmd.colorscheme("koehler")
