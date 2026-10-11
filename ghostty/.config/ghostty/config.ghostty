@@ -1,2 +1,9 @@
+background = 000000
+foreground = ffffff
+
 font-feature = -calt, -liga, -dlig
-confirm-close-surface=false
+confirm-close-surface = false
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor

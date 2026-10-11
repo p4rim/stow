@@ -3,6 +3,22 @@ vim.opt.termguicolors = true
 -- +---+---+ +---+---+ +---+---+
 -- + core/ui.lua
 -- +---+---+ +---+---+ +---+---+
+vim.cmd("highlight SignColumn guibg=#000000")
+vim.pack.add({
+	{ src = "https://github.com/morhetz/gruvbox" },
+})
+
+-- Fix colored backgrounds on syntax highlights
+vim.g.gruvbox_guisp_fallback = "NONE"
+vim.g.gruvbox_inverse = 0
+
+-- Load default Gruvbox
+vim.cmd.colorscheme("gruvbox")
+
+-- Pure black background only
+vim.cmd("highlight Normal guibg=#000000")
+vim.cmd("highlight NormalNC guibg=#000000")
+vim.cmd("highlight EndOfBuffer guibg=#000000")
 
 -- vim.pack.add({
 -- 	"https://github.com/rebelot/kanagawa.nvim",
@@ -19,9 +35,23 @@ vim.opt.termguicolors = true
 -- })
 -- vim.cmd.colorscheme("luna")
 
+-- vim.pack.add({
+-- 	"https://github.com/shaunsingh/nord.nvim",
+-- })
+--
+-- vim.cmd.colorscheme("nord")
+--
+-- vim.g.nord_contrast = true
+-- vim.g.nord_borders = true
+-- vim.g.nord_disable_background = true
+-- vim.g.nord_italic = false
+-- vim.g.nord_bold = false
+--
+-- require("nord").set()
+--
 -- Nice ones to switch around between
-vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
-vim.cmd.colorscheme("ring0dark")
+-- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
+-- vim.cmd.colorscheme("ring0dark")
 -- vim.cmd.colorscheme("lunaperche")
 -- vim.cmd.colorscheme("habamax")
 -- vim.cmd.colorscheme("koehler")
@@ -40,6 +70,7 @@ vim.opt.cursorline = false
 vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
+vim.opt.background = "dark"
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -53,8 +84,8 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "100"
+vim.opt.signcolumn = "no"
+vim.opt.colorcolumn = "0"
 vim.opt.showmatch = true
 vim.opt.cmdheight = 1
 vim.opt.completeopt = "menuone,noinsert,noselect"
@@ -207,118 +238,118 @@ end
 -- + core/statusline.lua
 -- +---+---+ +---+---+ +---+---+
 
-local statusline = {}
-
-local function highlights()
-	vim.api.nvim_set_hl(0, "RetroStatus", {
-		fg = "#bcbcbc",
-		bg = "#1c1c1c",
-		ctermfg = 250,
-		ctermbg = 234,
-	})
-
-	vim.api.nvim_set_hl(0, "RetroMode", {
-		fg = "#1c1c1c",
-		bg = "#d0d0d0",
-		bold = true,
-		ctermfg = 234,
-		ctermbg = 252,
-	})
-
-	vim.api.nvim_set_hl(0, "RetroMuted", {
-		fg = "#949494",
-		bg = "#1c1c1c",
-		ctermfg = 246,
-		ctermbg = 234,
-	})
-end
-
-local modes = {
-	n = "NORMAL",
-	i = "INSERT",
-	v = "VISUAL",
-	V = "V-LINE",
-	["\22"] = "V-BLOCK",
-	s = "SELECT",
-	S = "S-LINE",
-	["\19"] = "S-BLOCK",
-	R = "REPLACE",
-	c = "COMMAND",
-	r = "PROMPT",
-	["!"] = "SHELL",
-	t = "TERM",
-}
-
-function statusline.render()
-	local mode = vim.api.nvim_get_mode().mode
-	local label = modes[mode:sub(1, 1)] or "NORMAL"
-
-	if mode:sub(1, 2) == "no" then
-		label = "OPERATOR"
-	end
-
-	local width = vim.o.columns
-
-	local parts = {
-		"%#RetroMode# " .. label .. " ",
-		"%#RetroStatus# %<%f %m%r",
-		"%=",
-		"%#RetroMuted#",
-	}
-
-	if width >= 80 then
-		table.insert(parts, " %{&filetype == '' ? '-' : &filetype} |")
-	end
-
-	table.insert(parts, " %l:%c ")
-
-	if width >= 60 then
-		table.insert(parts, "| %p%% ")
-	end
-
-	if width >= 100 then
-		table.insert(parts, "| %{strftime('%H:%M')} ")
-	end
-
-	return table.concat(parts)
-end
-
-vim.opt.laststatus = 3
-vim.opt.showmode = false
-
--- Expose only the render function Neovim needs for statusline evaluation.
-_G.zen_statusline_render = statusline.render
-
-vim.opt.statusline = "%!v:lua.zen_statusline_render()"
-
-local statusline_group = vim.api.nvim_create_augroup("RetroStatusline", { clear = true })
-
-vim.api.nvim_create_autocmd("ColorScheme", {
-	group = statusline_group,
-	callback = highlights,
-})
-
-vim.api.nvim_create_autocmd("ModeChanged", {
-	group = statusline_group,
-	callback = function()
-		vim.cmd.redrawstatus()
-	end,
-})
-
-highlights()
-
-local statusline_timer = vim.fn.timer_start(30000, function()
-	vim.cmd.redrawstatus()
-end, { ["repeat"] = -1 })
-
-vim.api.nvim_create_autocmd("VimLeavePre", {
-	group = statusline_group,
-	callback = function()
-		if statusline_timer ~= -1 then
-			vim.fn.timer_stop(statusline_timer)
-		end
-	end,
-})
+-- local statusline = {}
+--
+-- local function highlights()
+-- 	vim.api.nvim_set_hl(0, "RetroStatus", {
+-- 		fg = "#bcbcbc",
+-- 		bg = "#1c1c1c",
+-- 		ctermfg = 250,
+-- 		ctermbg = 234,
+-- 	})
+--
+-- 	vim.api.nvim_set_hl(0, "RetroMode", {
+-- 		fg = "#1c1c1c",
+-- 		bg = "#d0d0d0",
+-- 		bold = true,
+-- 		ctermfg = 234,
+-- 		ctermbg = 252,
+-- 	})
+--
+-- 	vim.api.nvim_set_hl(0, "RetroMuted", {
+-- 		fg = "#949494",
+-- 		bg = "#1c1c1c",
+-- 		ctermfg = 246,
+-- 		ctermbg = 234,
+-- 	})
+-- end
+--
+-- local modes = {
+-- 	n = "NORMAL",
+-- 	i = "INSERT",
+-- 	v = "VISUAL",
+-- 	V = "V-LINE",
+-- 	["\22"] = "V-BLOCK",
+-- 	s = "SELECT",
+-- 	S = "S-LINE",
+-- 	["\19"] = "S-BLOCK",
+-- 	R = "REPLACE",
+-- 	c = "COMMAND",
+-- 	r = "PROMPT",
+-- 	["!"] = "SHELL",
+-- 	t = "TERM",
+-- }
+--
+-- function statusline.render()
+-- 	local mode = vim.api.nvim_get_mode().mode
+-- 	local label = modes[mode:sub(1, 1)] or "NORMAL"
+--
+-- 	if mode:sub(1, 2) == "no" then
+-- 		label = "OPERATOR"
+-- 	end
+--
+-- 	local width = vim.o.columns
+--
+-- 	local parts = {
+-- 		"%#RetroMode# " .. label .. " ",
+-- 		"%#RetroStatus# %<%f %m%r",
+-- 		"%=",
+-- 		"%#RetroMuted#",
+-- 	}
+--
+-- 	if width >= 80 then
+-- 		table.insert(parts, " %{&filetype == '' ? '-' : &filetype} |")
+-- 	end
+--
+-- 	table.insert(parts, " %l:%c ")
+--
+-- 	if width >= 60 then
+-- 		table.insert(parts, "| %p%% ")
+-- 	end
+--
+-- 	if width >= 100 then
+-- 		table.insert(parts, "| %{strftime('%H:%M')} ")
+-- 	end
+--
+-- 	return table.concat(parts)
+-- end
+--
+-- vim.opt.laststatus = 3
+-- vim.opt.showmode = false
+--
+-- -- Expose only the render function Neovim needs for statusline evaluation.
+-- _G.zen_statusline_render = statusline.render
+--
+-- vim.opt.statusline = "%!v:lua.zen_statusline_render()"
+--
+-- local statusline_group = vim.api.nvim_create_augroup("RetroStatusline", { clear = true })
+--
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+-- 	group = statusline_group,
+-- 	callback = highlights,
+-- })
+--
+-- vim.api.nvim_create_autocmd("ModeChanged", {
+-- 	group = statusline_group,
+-- 	callback = function()
+-- 		vim.cmd.redrawstatus()
+-- 	end,
+-- })
+--
+-- highlights()
+--
+-- local statusline_timer = vim.fn.timer_start(30000, function()
+-- 	vim.cmd.redrawstatus()
+-- end, { ["repeat"] = -1 })
+--
+-- vim.api.nvim_create_autocmd("VimLeavePre", {
+-- 	group = statusline_group,
+-- 	callback = function()
+-- 		if statusline_timer ~= -1 then
+-- 			vim.fn.timer_stop(statusline_timer)
+-- 		end
+-- 	end,
+-- })
 
 -- +---+---+ +---+---+ +---+---+
 -- + plugins/init.lua
