@@ -1,24 +1,57 @@
 vim.opt.termguicolors = true
+-- vim.pack.add({
+-- 	{
+-- 		src = "https://github.com/rose-pine/neovim",
+-- 		name = "rose-pine",
+-- 	},
+-- })
+--
+-- require("rose-pine").setup({
+-- 	variant = "main",
+--
+-- 	palette = {
+-- 		main = {
+-- 			base = "#000000",
+-- 			surface = "#000000",
+-- 			overlay = "#000000",
+-- 		},
+-- 	},
+--
+-- 	highlight_groups = {
+-- 		Normal = { bg = "#000000" },
+-- 		NormalNC = { bg = "#000000" },
+-- 		NormalFloat = { bg = "#000000" },
+-- 		FloatBorder = { bg = "#000000" },
+-- 		SignColumn = { bg = "#000000" },
+-- 		LineNr = { bg = "#000000" },
+-- 		CursorLine = { bg = "#000000" },
+-- 		StatusLine = { bg = "#000000" },
+-- 		Pmenu = { bg = "#000000" },
+-- 		EndOfBuffer = { bg = "#000000" },
+-- 	},
+-- })
+--
+-- vim.cmd.colorscheme("rose-pine")
 
 -- +---+---+ +---+---+ +---+---+
 -- + core/ui.lua
 -- +---+---+ +---+---+ +---+---+
-vim.cmd("highlight SignColumn guibg=#000000")
-vim.pack.add({
-	{ src = "https://github.com/morhetz/gruvbox" },
-})
-
--- Fix colored backgrounds on syntax highlights
-vim.g.gruvbox_guisp_fallback = "NONE"
-vim.g.gruvbox_inverse = 0
-
--- Load default Gruvbox
-vim.cmd.colorscheme("gruvbox")
-
--- Pure black background only
-vim.cmd("highlight Normal guibg=#000000")
-vim.cmd("highlight NormalNC guibg=#000000")
-vim.cmd("highlight EndOfBuffer guibg=#000000")
+-- vim.cmd("highlight SignColumn guibg=#000000")
+-- vim.pack.add({
+-- 	{ src = "https://github.com/morhetz/gruvbox" },
+-- })
+--
+-- -- Fix colored backgrounds on syntax highlights
+-- vim.g.gruvbox_guisp_fallback = "NONE"
+-- vim.g.gruvbox_inverse = 0
+--
+-- -- Load default Gruvbox
+-- vim.cmd.colorscheme("gruvbox")
+--
+-- -- Pure black background only
+-- vim.cmd("highlight Normal guibg=#000000")
+-- vim.cmd("highlight NormalNC guibg=#000000")
+-- vim.cmd("highlight EndOfBuffer guibg=#000000")
 
 -- vim.pack.add({
 -- 	"https://github.com/rebelot/kanagawa.nvim",
@@ -48,7 +81,10 @@ vim.cmd("highlight EndOfBuffer guibg=#000000")
 -- vim.g.nord_bold = false
 --
 -- require("nord").set()
---
+
+vim.pack.add({ "https://github.com/drewxs/ash.nvim" })
+vim.cmd([[colorscheme ash]])
+
 -- Nice ones to switch around between
 -- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
 -- vim.cmd.colorscheme("ring0dark")

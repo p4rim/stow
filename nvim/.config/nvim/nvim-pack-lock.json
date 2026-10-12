@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "ash.nvim": {
+      "rev": "3223e825a96b89f867614317d0aa74342a57a62f",
+      "src": "https://github.com/drewxs/ash.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/Saghen/blink.cmp",
@@ -68,6 +72,10 @@
     "ring0-dark.nvim": {
       "rev": "17d7ec13e2a4b9167aac1ee8f249cb783249c821",
       "src": "https://github.com/xLeapProtocol/ring0-dark.nvim"
+    },
+    "rose-pine": {
+      "rev": "ff483051a47e27d84bdef47703538df1ed9f4a47",
+      "src": "https://github.com/rose-pine/neovim"
     },
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
