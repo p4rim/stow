@@ -85,6 +85,17 @@ vim.opt.termguicolors = true
 vim.pack.add({ "https://github.com/drewxs/ash.nvim" })
 vim.cmd([[colorscheme ash]])
 
+vim.cmd([[
+  highlight Normal guibg=NONE ctermbg=NONE
+  highlight NormalNC guibg=NONE ctermbg=NONE
+  highlight NonText guibg=NONE ctermbg=NONE
+  highlight SignColumn guibg=NONE ctermbg=NONE
+  highlight EndOfBuffer guibg=NONE ctermbg=NONE
+  highlight LineNr guibg=NONE ctermbg=NONE
+  highlight Folded guibg=NONE ctermbg=NONE
+  highlight VertSplit guibg=NONE ctermbg=NONE
+]])
+
 -- Nice ones to switch around between
 -- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })
 -- vim.cmd.colorscheme("ring0dark")
@@ -138,8 +149,8 @@ vim.opt.fillchars = { eob = " " }
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.swapfile = false
-vim.opt.undofile = true
-vim.opt.undodir = undodir
+-- vim.opt.undofile = true
+-- vim.opt.undodir = undodir
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 vim.opt.ttimeoutlen = 50
