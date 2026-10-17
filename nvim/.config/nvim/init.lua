@@ -1,37 +1,37 @@
 vim.opt.termguicolors = true
--- vim.pack.add({
--- 	{
--- 		src = "https://github.com/rose-pine/neovim",
--- 		name = "rose-pine",
--- 	},
--- })
---
--- require("rose-pine").setup({
--- 	variant = "main",
---
--- 	palette = {
--- 		main = {
--- 			base = "#000000",
--- 			surface = "#000000",
--- 			overlay = "#000000",
--- 		},
--- 	},
---
--- 	highlight_groups = {
--- 		Normal = { bg = "#000000" },
--- 		NormalNC = { bg = "#000000" },
--- 		NormalFloat = { bg = "#000000" },
--- 		FloatBorder = { bg = "#000000" },
--- 		SignColumn = { bg = "#000000" },
--- 		LineNr = { bg = "#000000" },
--- 		CursorLine = { bg = "#000000" },
--- 		StatusLine = { bg = "#000000" },
--- 		Pmenu = { bg = "#000000" },
--- 		EndOfBuffer = { bg = "#000000" },
--- 	},
--- })
---
--- vim.cmd.colorscheme("rose-pine")
+vim.pack.add({
+	{
+		src = "https://github.com/rose-pine/neovim",
+		name = "rose-pine",
+	},
+})
+
+require("rose-pine").setup({
+	variant = "main",
+
+	palette = {
+		main = {
+			base = "#000000",
+			surface = "#000000",
+			overlay = "#000000",
+		},
+	},
+
+	highlight_groups = {
+		Normal = { bg = "#000000" },
+		NormalNC = { bg = "#000000" },
+		NormalFloat = { bg = "#000000" },
+		FloatBorder = { bg = "#000000" },
+		SignColumn = { bg = "#000000" },
+		LineNr = { bg = "#000000" },
+		CursorLine = { bg = "#000000" },
+		StatusLine = { bg = "#000000" },
+		Pmenu = { bg = "#000000" },
+		EndOfBuffer = { bg = "#000000" },
+	},
+})
+
+vim.cmd.colorscheme("rose-pine")
 
 -- +---+---+ +---+---+ +---+---+
 -- + core/ui.lua
@@ -82,19 +82,19 @@ vim.opt.termguicolors = true
 --
 -- require("nord").set()
 
-vim.pack.add({ "https://github.com/drewxs/ash.nvim" })
-vim.cmd([[colorscheme ash]])
-
-vim.cmd([[
-  highlight Normal guibg=NONE ctermbg=NONE
-  highlight NormalNC guibg=NONE ctermbg=NONE
-  highlight NonText guibg=NONE ctermbg=NONE
-  highlight SignColumn guibg=NONE ctermbg=NONE
-  highlight EndOfBuffer guibg=NONE ctermbg=NONE
-  highlight LineNr guibg=NONE ctermbg=NONE
-  highlight Folded guibg=NONE ctermbg=NONE
-  highlight VertSplit guibg=NONE ctermbg=NONE
-]])
+-- vim.pack.add({ "https://github.com/drewxs/ash.nvim" })
+-- vim.cmd([[colorscheme ash]])
+--
+-- vim.cmd([[
+--   highlight Normal guibg=NONE ctermbg=NONE
+--   highlight NormalNC guibg=NONE ctermbg=NONE
+--   highlight NonText guibg=NONE ctermbg=NONE
+--   highlight SignColumn guibg=NONE ctermbg=NONE
+--   highlight EndOfBuffer guibg=NONE ctermbg=NONE
+--   highlight LineNr guibg=NONE ctermbg=NONE
+--   highlight Folded guibg=NONE ctermbg=NONE
+--   highlight VertSplit guibg=NONE ctermbg=NONE
+-- ]])
 
 -- Nice ones to switch around between
 -- vim.pack.add({ "https://github.com/xLeapProtocol/ring0-dark.nvim" })

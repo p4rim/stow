@@ -9,6 +9,10 @@
       "src": "https://github.com/Saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
+    "codecompanion.nvim": {
+      "rev": "3dd1ef7fa8d6aeb27020023e40293bac588de714",
+      "src": "https://github.com/olimorris/codecompanion.nvim"
+    },
     "conform.nvim": {
       "rev": "016802de402556da54c36bd7359b441266b01cdd",
       "src": "https://github.com/stevearc/conform.nvim"
