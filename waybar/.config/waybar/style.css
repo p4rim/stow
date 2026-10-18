@@ -1,0 +1,94 @@
+/* @define-color bg rgba(12, 16, 26, 0.88); */
+/* @define-color surface rgba(25, 31, 44, 0.85); */
+/* @define-color fg #dce6f2; */
+/* @define-color muted #748299; */
+/* @define-color accent #73daca; */
+/**/
+/* * { */
+/*   font-family: "JetBrainsMono Nerd Font"; */
+/*   font-size: 12px; */
+/*   font-weight: 600; */
+/*   min-height: 0; */
+/*   border: none; */
+/* } */
+/**/
+/* window#waybar { */
+/*   background: transparent; */
+/*   color: @fg; */
+/* } */
+/**/
+/* .modules-left, */
+/* .modules-center, */
+/* .modules-right { */
+/*   background: @bg; */
+/*   border: 1px solid rgba(115, 218, 202, 0.13); */
+/*   border-radius: 14px; */
+/*   padding: 0 10px; */
+/* } */
+/**/
+/* #workspaces button { */
+/*   color: @muted; */
+/*   padding: 0 8px; */
+/*   margin: 4px 2px; */
+/*   border-radius: 8px; */
+/*   background: transparent; */
+/*   transition: all 0.2s ease; */
+/* } */
+/**/
+/* #workspaces button.active { */
+/*   color: #10151f; */
+/*   background: @accent; */
+/* } */
+/**/
+/* #workspaces button:hover { */
+/*   color: @accent; */
+/*   background: @surface; */
+/* } */
+/**/
+/* #window { */
+/*   color: @muted; */
+/*   padding: 0 10px; */
+/* } */
+/**/
+/* window#waybar.empty #window { */
+/*   background: transparent; */
+/* } */
+/**/
+/* #clock { */
+/*   color: @accent; */
+/*   padding: 0 12px; */
+/*   letter-spacing: 1px; */
+/* } */
+/**/
+/* #network, */
+/* #pulseaudio, */
+/* #cpu, */
+/* #memory, */
+/* #battery, */
+/* #tray { */
+/*   padding: 0 9px; */
+/*   color: @fg; */
+/* } */
+/**/
+/* #network { */
+/*   color: @accent; */
+/* } */
+/**/
+/* #battery.charging { */
+/*   color: @accent; */
+/* } */
+/**/
+/* #battery.warning { */
+/*   color: #e5c07b; */
+/* } */
+/**/
+/* #battery.critical { */
+/*   color: #f7768e; */
+/* } */
+/**/
+/* tooltip { */
+/*   background: #111722; */
+/*   border: 1px solid @accent; */
+/*   border-radius: 10px; */
+/*   color: @fg; */
+/* } */
