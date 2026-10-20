@@ -206,6 +206,7 @@ local toggle_system_bar = "qs ipc call bar toggle"
 local app_menu = "qs ipc call launcher toggle"
 local terminal = "ghostty"
 local browser = "chromium"
+-- local password_manager = "1password"
 
 local mainMod = "SUPER"
 local secondMod = "SHIFT + SUPER"
@@ -222,6 +223,7 @@ hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(app_menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+-- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(password_manager))
 
 -- Close & Kill windwos/applications
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
