@@ -15,7 +15,7 @@ hl.monitor({
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("swaybg -c '#000000'")
-	hl.exec_cmd("qs -n -d")
+	-- hl.exec_cmd("qs -n -d")
 end)
 
 -------------------------------
@@ -202,8 +202,8 @@ hl.device({
 
 -- local fileManager = "dolphin"
 
-local toggle_system_bar = "qs ipc call bar toggle"
-local app_menu = "qs ipc call launcher toggle"
+-- local toggle_system_bar = "qs ipc call bar toggle"
+-- local app_menu = "qs ipc call launcher toggle"
 local terminal = "ghostty"
 local browser = "chromium"
 -- local password_manager = "1password"
