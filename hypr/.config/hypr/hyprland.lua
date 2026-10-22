@@ -200,12 +200,14 @@ hl.device({
 ---- KEYBINDINGS ----
 ---------------------
 
+-- hl.bind(secondMod .. " + B", hl.dsp.exec_cmd(toggle_system_bar))
 -- local fileManager = "dolphin"
-
 -- local toggle_system_bar = "qs ipc call bar toggle"
 -- local app_menu = "qs ipc call launcher toggle"
+
 local terminal = "ghostty"
 local browser = "chromium"
+local app_menu = "rofi -show drun"
 -- local password_manager = "1password"
 
 local mainMod = "SUPER"
@@ -213,7 +215,6 @@ local secondMod = "SHIFT + SUPER"
 local resizeMod = "ALT"
 
 -- System utilities & Actions
-hl.bind(secondMod .. " + B", hl.dsp.exec_cmd(toggle_system_bar))
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
