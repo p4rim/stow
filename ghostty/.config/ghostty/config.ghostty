@@ -6,7 +6,7 @@ confirm-close-surface = false
 
 # Theme
 
-theme = Tomorrow Night Burns
+# theme = Tomorrow Night Burns
 cursor-color = #FFFFFF
 
 background = #11100F
