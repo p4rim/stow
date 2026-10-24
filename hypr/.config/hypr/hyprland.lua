@@ -202,13 +202,11 @@ hl.device({
 
 -- hl.bind(secondMod .. " + B", hl.dsp.exec_cmd(toggle_system_bar))
 -- local fileManager = "dolphin"
--- local toggle_system_bar = "qs ipc call bar toggle"
--- local app_menu = "qs ipc call launcher toggle"
 
 local terminal = "ghostty"
 local browser = "chromium"
 local app_menu = "rofi -show drun"
--- local password_manager = "1password"
+local wallpaper_menu = "waypaper"
 
 local mainMod = "SUPER"
 local secondMod = "SHIFT + SUPER"
@@ -224,7 +222,7 @@ hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(app_menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
--- hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(password_manager))
+hl.bind(secondMod .. " + W", hl.dsp.exec_cmd(wallpaper_menu))
 
 -- Close & Kill windwos/applications
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
