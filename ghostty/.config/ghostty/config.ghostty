@@ -9,7 +9,8 @@ confirm-close-surface = false
 # theme = Tomorrow Night Burns
 cursor-color = #FFFFFF
 
-background = #11100F
+# background = #11100F
+background = #000000
 foreground = #FFFFFF
 
 
