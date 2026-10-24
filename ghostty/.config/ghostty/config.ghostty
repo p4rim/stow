@@ -14,7 +14,7 @@ background = #000000
 foreground = #FFFFFF
 
 
-# background-opacity = 0.9
+background-opacity = 1
 
 # Cursor
 
