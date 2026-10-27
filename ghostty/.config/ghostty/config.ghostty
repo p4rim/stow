@@ -1,4 +1,6 @@
 # Font
+# font-family = Terminus
+# font-size = 24
 
 font-family = Hack Nerd Font Mono
 font-feature = -calt, -liga, -dlig

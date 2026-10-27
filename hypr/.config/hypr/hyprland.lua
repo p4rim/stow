@@ -204,7 +204,7 @@ hl.device({
 -- local fileManager = "dolphin"
 
 local terminal = "ghostty"
-local browser = "chromium"
+local browser = "firefox"
 local app_menu = "rofi -show drun"
 local wallpaper_menu = "waypaper"
 
