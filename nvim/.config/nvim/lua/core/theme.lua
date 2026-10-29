@@ -10,6 +10,10 @@ vim.pack.add({
 require("rose-pine").setup({
 	variant = "main",
 
+	styles = {
+		transparency = true,
+	},
+
 	palette = {
 		main = {
 			base = "#000000",
@@ -19,16 +23,17 @@ require("rose-pine").setup({
 	},
 
 	highlight_groups = {
-		Normal = { bg = "#000000" },
-		NormalNC = { bg = "#000000" },
-		NormalFloat = { bg = "#000000" },
-		FloatBorder = { bg = "#000000" },
-		SignColumn = { bg = "#000000" },
-		LineNr = { bg = "#000000" },
-		CursorLine = { bg = "#000000" },
-		StatusLine = { bg = "#000000" },
-		Pmenu = { bg = "#000000" },
-		EndOfBuffer = { bg = "#000000" },
+		ColorColumn = { bg = "#262626" },
+		Normal = { bg = "NONE" },
+		NormalNC = { bg = "NONE" },
+		NormalFloat = { bg = "NONE" },
+		FloatBorder = { bg = "NONE" },
+		SignColumn = { bg = "NONE" },
+		LineNr = { bg = "NONE" },
+		CursorLine = { bg = "NONE" },
+		StatusLine = { bg = "NONE" },
+		Pmenu = { bg = "NONE" },
+		EndOfBuffer = { bg = "NONE" },
 	},
 })
 

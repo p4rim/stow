@@ -18,8 +18,8 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.signcolumn = "no"
-vim.opt.colorcolumn = "0"
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "80"
 vim.opt.showmatch = true
 vim.opt.cmdheight = 1
 vim.opt.completeopt = "menuone,noinsert,noselect"

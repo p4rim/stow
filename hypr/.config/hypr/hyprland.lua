@@ -24,6 +24,8 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
+hl.env("XCURSOR_THEME", "Adwaita")
+hl.env("XCURSOR_PATH", "/run/current-system/sw/share/icons:/home/alice/.local/share/icons:/home/alice/.icons")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
@@ -204,7 +206,7 @@ hl.device({
 -- local fileManager = "dolphin"
 
 local terminal = "ghostty"
-local browser = "firefox"
+local browser = "chromium"
 local app_menu = "rofi -show drun"
 local wallpaper_menu = "waypaper"
 
