@@ -25,7 +25,6 @@ end)
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
 hl.env("XCURSOR_THEME", "Adwaita")
-hl.env("XCURSOR_PATH", "/run/current-system/sw/share/icons:/home/alice/.local/share/icons:/home/alice/.icons")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
@@ -64,8 +63,8 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 0,
-		rounding_power = 0,
+		-- rounding = 0,
+		-- rounding_power = 0,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
 		shadow = {
