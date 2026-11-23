@@ -1,0 +1,9 @@
+confirm-close-surface = false 
+font-size = 24
+background = #000000
+foreground = #ffffff
+shell-integration-features = no-cursor
+cursor-style-blink = true
+font-feature = -calt, -liga, -dlig
+keybind = alt+up=scroll_page_lines:-3
+keybind = alt+down=scroll_page_lines:3
