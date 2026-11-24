@@ -1,10 +1,8 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-vim.opt.wrap = true
+vim.opt.number = false 
+vim.opt.relativenumber = false
+vim.opt.wrap = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
-vim.opt.background = "dark"
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -18,20 +16,24 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
-vim.opt.showmatch = true
+vim.opt.signcolumn = "no"
+vim.opt.showmatch = false
 vim.opt.cmdheight = 1
-vim.opt.completeopt = "menuone,noinsert,noselect"
-vim.opt.showmode = false
+vim.opt.autocomplete = false
+vim.opt.showmode = true
 vim.opt.laststatus = 2
-vim.opt.pumheight = 10
-vim.opt.pumblend = 10
+vim.opt.statusline = "%<%f %h%w%m%r%=%-14.(%l,%c%V%) %P"
+vim.opt.shortmess = "filnxtToOS"
+vim.opt.ruler = true
+vim.opt.showcmd = true
+vim.opt.smoothscroll = true
+vim.opt.display = ""
+vim.opt.listchars = { eol = "$" }
 vim.opt.winblend = 0
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
-vim.opt.synmaxcol = 300
-vim.opt.fillchars = { eob = " " }
+vim.opt.synmaxcol = 3000
+vim.opt.fillchars = { eob = "~" }
 
 vim.opt.backup = false
 vim.opt.writebackup = false
@@ -53,7 +55,6 @@ vim.opt.mouse = "a"
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.modifiable = true
 
--- vim.opt.guicursor = "a:block-blinkon0"
 vim.opt.guicursor = "a:block-blinkwait700-blinkon500-blinkoff500"
 
 vim.opt.splitbelow = true
