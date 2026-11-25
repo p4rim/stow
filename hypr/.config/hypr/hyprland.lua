@@ -32,15 +32,25 @@ hl.config({
 		cm_auto_hdr = 0,
 	},
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
+		gaps_in = 5,
+		gaps_out = 5,
 
-		border_size = 1,
+		border_size = 2,
 
 		col = {
 			active_border = "rgba(ffffffff)",
 			inactive_border = "rgba(00000000)",
 		},
+
+		-- col = {
+		-- 	active_border = "rgba(c4a7e7ff)",
+		-- 	inactive_border = "rgba(00000000)",
+		-- },
+
+		-- col = {
+		-- 	active_border = "rgba(ebbcbaff)",
+		-- 	inactive_border = "rgba(00000000)",
+		-- },
 
 		resize_on_border = false,
 		allow_tearing = false,
@@ -148,10 +158,10 @@ hl.config({
 
 hl.config({
 	input = {
-		kb_layout = "us",
+		kb_layout = "us, ara",
 		kb_variant = "",
 		kb_model = "",
-		kb_options = "",
+		kb_options = "grp:alt_shift_toggle",
 		kb_rules = "",
 
 		follow_mouse = 1,
@@ -184,6 +194,7 @@ hl.device({
 
 local terminal = "ghostty"
 local browser = "chromium"
+local wallpaper_engine = "waypaper"
 local menu = "rofi -show drun"
 
 local mainMod = "SUPER"
@@ -198,6 +209,7 @@ hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(secondMod .. " + W", hl.dsp.exec_cmd(wallpaper_engine))
 
 -- Move focus with mainMod + hjkl
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
