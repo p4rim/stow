@@ -1,3 +1,5 @@
+font-feature = -calt, -liga, -dlig
+font-style = Regular
 confirm-close-surface = false 
 background = #000000
 foreground = #ffffff
@@ -8,11 +10,9 @@ keybind = alt+down=scroll_page_lines:3
 
 
 # font-family = JetBrains Mono Nerd Font
-font-style = Regular
-font-style-bold = false
-font-style-italic = false
-font-style-bold-italic = false
-font-synthetic-style = false
-bold-is-bright = false
-font-feature = -calt, -liga, -dlig
+# font-style-bold = false
+# font-style-italic = false
+# font-style-bold-italic = false
+# font-synthetic-style = false
+# bold-is-bright = false
 # font-size = 24
